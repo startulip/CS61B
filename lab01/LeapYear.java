@@ -1,6 +1,6 @@
 /**
  * Class that determines whether or not a year is a leap year.
- * @author YOUR NAME HERE
+ * @author FANDADA
  */
 public class LeapYear {
 
@@ -9,6 +9,18 @@ public class LeapYear {
      */
     public static boolean isLeapYear(int year) {
         // Optional TODO: Fill in this method.
+        if (year % 4 != 0) {
+            return false;
+        }
+        else if (year % 100 != 0) {
+            return false;
+        }
+        else if (year % 400 != 0) {
+            return false ;
+        }
+        else {
+            return true;
+        }
     }
 
     /** Calls isLeapYear to print correct statement. */
@@ -25,6 +37,6 @@ public class LeapYear {
         System.out.println("Checking the year 2000, which should be a leap year:");
         checkLeapYear(2000);
         System.out.println("Checking the year 1700, which should be not a leap year:");
-        checkLeapYear(1700);
+        checkLeapYear(2100);
     }
 }
